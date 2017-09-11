@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/min/jquery3.0.0.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/min/jquery3.0.0.js"></script>
   <script src="js/min/main.js"></script>
 </head>
 <body>
@@ -16,8 +16,9 @@
       </video>
     </div>
     <h1>OUR PLACE<span>WHERE SOUND OF HAPPYNESS GATHERS</span></h1>
+  </header>
 
-    <nav class="close">
+  <nav class="close">
       <ul class="main-nav">
         <li><a href="#">VISIT MODEL HOUSE</a></li>
         <li><a href="#">CONCEPT</a></li>
@@ -27,23 +28,60 @@
         <li><a href="#">CONTACT</a></li>
         <li><a href="#">COMPANY</a></li>
       </ul>
-    </nav>
+  </nav>
     <div class="nav-btn">
       <span class="nav-btn__open"><span>開</span></span>
       <span class="nav-btn__close"><span>閉</span></span>
     </div>
-  </header>
+
   <main>
+    <div class="popupbg"></div>
     <section class="sec_02">
       <ul class="carousel">
-        <li><div><img src="https://placehold.jp/980x480.png" alt=""></div></li>
-        <li><div><img src="https://placehold.jp/980x480.png" alt=""></div></li>
-        <li><div><img src="https://placehold.jp/980x480.png" alt=""></div></li>
-        <li><div><img src="https://placehold.jp/980x480.png" alt=""></div></li>
+        <li>
+        <a href="#img01_wrapper" class="pop"><img src="https://placehold.jp/980x480.png" alt="" class="thumb"></a>
+        <div id="img01_wrapper" class="popup_wrapper">
+          <div class=" slider">
+            <div><img src="https://placehold.jp/980x480.png" class="img"></div>
+            <div><img src="https://placehold.jp/980x480.png" class="img"></div>
+            <div><img src="https://placehold.jp/980x480.png" class="img"></div>
+            <div><img src="https://placehold.jp/980x480.png" class="img"></div>
+          </div>
+          <div class="close_btn">×</div>
+        </div>
+        </li>
+
+        <li>
+        <a href="#img02_wrapper" class="pop"><img src="https://placehold.jp/980x480.png" alt="" class="thumb"></a>
+        <div id="img02_wrapper" class="popup_wrapper">  
+          <img src="https://placehold.jp/980x480.png" class="img">
+          <div class="close_btn">×</div>
+        </div><!-- ポップアップしたい要素-->
+        </li>
+
+        <li>
+        <a href="#img03_wrapper" class="pop"><img src="https://placehold.jp/980x480.png" alt="" class="thumb"></a>
+        <div id="img03_wrapper" class="popup_wrapper">
+          <img src="https://placehold.jp/980x480.png" class="img">
+          <div class="close_btn">×</div>
+        </div><!-- ポップアップしたい要素-->
+        </li>
+
+        <li>
+        <a href="#img04_wrapper" class="pop"><img src="https://placehold.jp/980x480.png" alt="" class="thumb"></a>
+        <!-- ポップアップしたい要素-->
+        <div id="img04_wrapper" class="popup_wrapper">  
+          <img src="https://placehold.jp/980x480.png" class="img">
+          <div class="close_btn">×</div>
+        </div>
+        </li>
+
+
       </ul>
     </section>
     <section class="sec_03"><ul id="instafeed"></ul></section>
     <section class="sec_04"></section>
+
   </main>
   <footer>
     お問い合わせ
