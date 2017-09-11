@@ -7,3 +7,20 @@
     width: 50%;
   }
 }
+
+.sec_02__message {
+  padding: 36px 0;
+  text-align: center;
+  span {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 24px;
+  }
+  a {
+    color: #fff;
+    font-family: 'corm_b';
+    font-size: 2vw;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+}
