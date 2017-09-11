@@ -1,1 +1,9 @@
 // section_02
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 50%;
+  }
+}

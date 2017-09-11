@@ -1,1 +1,14 @@
 // section_03
+
+ul#instafeed {
+	position: relative;
+	height: 480px;
+	overflow: hidden;
+	width: 100%;
+	li {
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0;
+	}
+}

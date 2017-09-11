@@ -21,6 +21,48 @@ img { width: 100%; vertical-align: top; }
 
 .device-sp { display: none; }
 
-html, body { line-height: 1.6; background-color: #e7eef5; font-family: ‒apple‒system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans‒serif; }
+html, body { line-height: 1.6; background-color: #e7eef5; font-family: ‒apple‒system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans‒serif; letter-spacing: 1px; }
 
-h1 { display: block; }
+@font-face { font-family: 'corm_b'; src: url("../font/Cormorant-Bold.woff") format("woff"), url("../font/Cormorant-Bold.ttf") format("truetype"); font-weight: bold; font-style: bold; }
+
+@font-face { font-family: 'corm_m'; src: url("../font/Cormorant-Medium.woff") format("woff"), url("../font/Cormorant-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+header { position: relative; z-index: 100; }
+
+header h1 { font-family: 'corm_m'; width: 100%; text-align: center; margin: auto; font-size: 5vw; color: #fff; height: 200px; line-height: 1.2; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; position: absolute; top: 0; bottom: 0; }
+
+header h1 span { font-size: 1vw; }
+
+.header-video video { width: 100%; opacity: 0.6; vertical-align: top; }
+
+.header-video.active video { opacity: 0; }
+
+nav { position: fixed; top: 0; right: 0; width: 300px; height: 700px; transition: 0.5s; background-color: #cccccc; }
+
+nav ul.main-nav { height: 300px; width: 300px; position: absolute; top: 0; left: 20px; bottom: 0; margin: auto; }
+
+nav ul.main-nav li a { display: block; line-height: 3; text-decoration: none; color: #000; }
+
+nav.close { width: 60px; right: 30px; background-color: #fff; }
+
+nav.close ul.main-nav { left: 0; width: 60px; }
+
+nav.close ul.main-nav li a { display: none; }
+
+.nav-btn { position: fixed; width: 40px; height: 40px; top: 10px; right: 40px; display: block; }
+
+.nav-btn span { position: absolute; top: 0; right: 0px; color: transparent; display: block; width: 40px; height: 40px; }
+
+.nav-btn span:before, .nav-btn span:after { content: ""; display: block; width: 34px; height: 2px; background-color: #000; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; }
+
+.nav-btn span:before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.nav-btn span:after { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+.carousel { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.carousel li { width: 50%; }
+
+ul#instafeed { position: relative; height: 480px; overflow: hidden; width: 100%; }
+
+ul#instafeed li { width: 100%; position: absolute; top: 0px; left: 0; }

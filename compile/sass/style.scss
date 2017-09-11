@@ -3,11 +3,23 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 .device-pc{display: block;}
 .device-sp{display: none;}
 
-html, body {line-height: 1.6;
-  background-color: #e7eef5;font-family: ‒apple‒system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans‒serif;
+html, body {line-height: 1.6;background-color: #e7eef5;font-family: ‒apple‒system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans‒serif;letter-spacing: 1px;}
+
+
+@font-face{ 
+  font-family: 'corm_b';
+  src: url('../font/Cormorant-Bold.woff') format('woff'),
+  url('../font/Cormorant-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
 }
-
-
+@font-face{ 
+  font-family: 'corm_m';
+  src: url('../font/Cormorant-Medium.woff') format('woff'),
+  url('../font/Cormorant-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @import "section_01/_section_01";
 @import "section_02/_section_02";
