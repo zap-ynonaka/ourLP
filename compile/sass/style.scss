@@ -17,26 +17,6 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
   font-weight: normal;
   font-style: normal;
 }
-
-@import "section_01/_section_01";
-@import "section_02/_section_02";
-@import "section_03/_section_03";
-@import "section_04/_section_04";
-@import "section_05/_section_05";
-
-
-@media screen and (max-width: 760px) {
-  @import "section_01/_section_01_sp";
-  @import "section_02/_section_02_sp";
-  @import "section_03/_section_03_sp";
-  @import "section_04/_section_04_sp";
-  @import "section_05/_section_05_sp";
-}
-
-
-
-
-
 /* Slider */
 .slick-loading .slick-list{background: #fff url('../image/ajax-loader.gif') center center no-repeat;}
 /* Icons */
@@ -83,3 +63,22 @@ html, body {line-height: 1.6;background-color: #e7eef5;font-family: "Yu Mincho",
 
 main {background-color: #bcb195;position: relative;z-index: 30;}
 
+
+
+
+
+
+@import "section_01/_section_01";
+@import "section_02/_section_02";
+@import "section_03/_section_03";
+@import "section_04/_section_04";
+@import "section_05/_section_05";
+
+
+@media screen and (max-width: 760px) {
+  @import "section_01/_section_01_sp";
+  @import "section_02/_section_02_sp";
+  @import "section_03/_section_03_sp";
+  @import "section_04/_section_04_sp";
+  @import "section_05/_section_05_sp";
+}
