@@ -25,82 +25,6 @@ img { width: 100%; vertical-align: top; }
 
 @font-face { font-family: 'corm_m'; src: url("../font/Cormorant-Medium.woff") format("woff"), url("../font/Cormorant-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-header { position: relative; z-index: 1; }
-
-header h1 { font-family: 'corm_m'; width: 100%; text-align: center; margin: auto; font-size: 5vw; color: #fff; height: 200px; line-height: 1.2; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; position: absolute; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); height: 100%; }
-
-header h1 img { width: 33%; }
-
-.header-video video { width: 100%; vertical-align: top; }
-
-.header-video.active video { opacity: 0; }
-
-nav { position: fixed; top: 0; right: 0; width: 300px; height: 700px; transition: 0.5s; background-color: rgba(188, 177, 149, 0.36); z-index: 50; }
-
-nav ul.main-nav { height: 300px; width: 300px; position: absolute; top: 0; left: 0; bottom: 0; margin: auto; }
-
-nav ul.main-nav li a { display: block; line-height: 3; text-decoration: none; color: #000; padding: 0 0 0 20px; font-family: 'corm_b'; }
-
-nav.close { width: 60px; right: 30px; }
-
-nav.close ul.main-nav { left: 0; width: 60px; }
-
-nav.close ul.main-nav li a { display: none; }
-
-.nav-btn { position: fixed; width: 40px; height: 40px; top: 10px; right: 40px; display: block; z-index: 60; }
-
-.nav-btn span { position: absolute; top: 0; right: 0px; color: transparent; display: block; width: 40px; height: 40px; }
-
-.nav-btn span:before, .nav-btn span:after { content: ""; display: block; width: 34px; height: 2px; background-color: #000; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; }
-
-.nav-btn span:before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
-
-.nav-btn span:after { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
-
-.carousel { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
-
-.carousel li { width: 50%; }
-
-.sec_02__message { padding: 36px 0; text-align: center; }
-
-.sec_02__message span { font-size: 14px; display: block; margin-bottom: 24px; }
-
-.sec_02__message a { color: #fff; font-family: 'corm_b'; font-size: 2vw; letter-spacing: 2px; text-decoration: none; }
-
-.popupbg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); visibility: hidden; }
-
-.popup_wrapper { position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; z-index: 0; text-align: center; width: 90%; height: 600px; }
-
-ul#instafeed { width: 98%; height: 600px; margin: 20px auto; overflow: hidden; }
-
-ul#instafeed li { width: 100%; position: relative; top: -25%; left: 0; }
-
-ul#instafeed a { display: block; position: relative; }
-
-ul#instafeed a:before, ul#instafeed a:after { content: ""; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; opacity: 0; }
-
-ul#instafeed a:before { width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.3); }
-
-ul#instafeed a:after { width: 200px; height: 100px; background-image: url(../image/Instagram_logo.png); background-repeat: no-repeat; background-size: 200px; background-position: 50% 50%; }
-
-ul#instafeed a:hover:before, ul#instafeed a:hover:after { opacity: 1; transition: 0.5s; }
-
-section.sec_04 iframe { width: 100% !important; }
-
-footer { background-color: #bcb195; }
-
-footer address { text-align: center; }
-
-footer h4 { padding: 16px 0; font-size: 1vw; }
-
-footer span { font-size: 80%; }
-
-footer span.device-pc { display: inline-block; font-size: 100%; }
-
-.footer-logo { width: 90px; margin: 36px auto 24px; }
-
-.copy { font-size: 90%; padding-bottom: 12px; }
-
 /* Slider */
 .slick-loading .slick-list { background: #fff url("../image/ajax-loader.gif") center center no-repeat; }
 
@@ -190,3 +114,99 @@ footer span.device-pc { display: inline-block; font-size: 100%; }
 html, body { line-height: 1.6; background-color: #e7eef5; font-family: "Yu Mincho", "YuMincho", serif; letter-spacing: 1px; }
 
 main { background-color: #bcb195; position: relative; z-index: 30; }
+
+header { position: relative; z-index: 1; }
+
+header h1 { font-family: 'corm_m'; width: 100%; text-align: center; margin: auto; font-size: 5vw; color: #fff; height: 200px; line-height: 1.2; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; position: absolute; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); height: 100%; }
+
+header h1 img { width: 33%; }
+
+.header-video video { width: 100%; vertical-align: top; }
+
+.header-video.active video { opacity: 0; }
+
+nav { position: fixed; top: 0; right: 0; width: 300px; height: 700px; transition: 0.5s; background-color: rgba(188, 177, 149, 0.36); z-index: 50; }
+
+nav ul.main-nav { height: 300px; width: 300px; position: absolute; top: 0; left: 0; bottom: 0; margin: auto; }
+
+nav ul.main-nav li a { display: block; line-height: 3; text-decoration: none; color: #000; padding: 0 0 0 20px; font-family: 'corm_b'; }
+
+nav.close { width: 60px; right: 30px; }
+
+nav.close ul.main-nav { left: 0; width: 60px; }
+
+nav.close ul.main-nav li a { display: none; }
+
+.nav-btn { position: fixed; width: 40px; height: 40px; top: 10px; right: 40px; display: block; z-index: 60; }
+
+.nav-btn span { position: absolute; top: 0; right: 0px; color: transparent; display: block; width: 40px; height: 40px; }
+
+.nav-btn span:before, .nav-btn span:after { content: ""; display: block; width: 34px; height: 2px; background-color: #000; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; }
+
+.nav-btn span:before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.nav-btn span:after { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+.carousel li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; }
+
+.carousel li a.pop { width: 50%; }
+
+.sec_02__message { padding: 36px 0; text-align: center; }
+
+.sec_02__message span { font-size: 14px; display: block; margin-bottom: 24px; }
+
+.sec_02__message a { color: #fff; font-family: 'corm_b'; font-size: 2vw; letter-spacing: 2px; text-decoration: none; }
+
+.close_btn:hover { cursor: pointer; }
+
+.popupbg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.65); visibility: hidden; z-index: 9999; }
+
+.popup_wrapper { position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; z-index: 0; text-align: center; width: 90%; height: 550px; visibility: hidden; }
+
+.close_btn { position: absolute; top: 0; left: 0; right: 0; margin: auto; background: #3e3a39; width: calc(10vmin - 60px); height: calc(10vmin - 60px); }
+
+.close_btn:before, .close_btn:after { width: 20px; height: 1px; background: #FFF; content: ""; display: block; position: absolute; top: 0; right: 0; left: 0; bottom: 0; margin: auto; }
+
+.close_btn:before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.close_btn:after { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+.slick-prev:before, .slick-next:before { font-family: 'slick'; font-size: 30px; line-height: 1; opacity: .45; color: white; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.slick-prev { left: -10px; z-index: 9999; }
+
+.slick-next { right: -10px; z-index: 9999; }
+
+.slick-dots li.slick-active button:before { color: #FFF; }
+
+.slick-dots li button:before { font-family: 'slick'; font-size: 6px; line-height: 20px; position: absolute; top: 0; left: 0; width: 20px; height: 20px; content: '•'; text-align: center; color: #a9a9a9; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+ul#instafeed { width: 98%; height: 600px; margin: 20px auto; overflow: hidden; }
+
+ul#instafeed li { width: 100%; position: relative; top: -25%; left: 0; }
+
+ul#instafeed a { display: block; position: relative; }
+
+ul#instafeed a:before, ul#instafeed a:after { content: ""; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; opacity: 0; }
+
+ul#instafeed a:before { width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.3); }
+
+ul#instafeed a:after { width: 200px; height: 100px; background-image: url(../image/Instagram_logo.png); background-repeat: no-repeat; background-size: 200px; background-position: 50% 50%; }
+
+ul#instafeed a:hover:before, ul#instafeed a:hover:after { opacity: 1; transition: 0.5s; }
+
+section.sec_04 iframe { width: 100% !important; }
+
+footer { background-color: #bcb195; }
+
+footer address { text-align: center; }
+
+footer h4 { padding: 16px 0; font-size: 1vw; }
+
+footer span { font-size: 80%; }
+
+footer span.device-pc { display: inline-block; font-size: 100%; }
+
+.footer-logo { width: 90px; margin: 36px auto 24px; }
+
+.copy { font-size: 90%; padding-bottom: 12px; }
