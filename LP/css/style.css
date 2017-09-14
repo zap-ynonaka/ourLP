@@ -147,6 +147,14 @@ nav.close ul.main-nav li a { display: none; }
 
 .nav-btn span:after { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
 
+.fadeOut { -webkit-animation-duration: 3s; animation-duration: 3s; -webkit-animation-name: fadeout; animation-name: fadeout; opacity: 0; }
+
+@-webkit-keyframes fadeout { from { opacity: 1; }
+  to { opacity: 0; } }
+
+@keyframes fadeout { from { opacity: 1; }
+  to { opacity: 0; } }
+
 .carousel li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; }
 
 .carousel li a.pop { width: 50%; }
