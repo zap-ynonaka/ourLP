@@ -37,28 +37,29 @@ feed.run();
 //   }
 // });
 
-// var timer;
+var timer;
+var fadeSpeed = 500;
 
-// function countDown() {
-//   console.log("成功！");
-//   return true;
-// }
+function countDown() {
+  $("header h1,.nav-btn,.close").addClass("fadeOut");
+  return true;
+}
 
-// function restartTimer() {
-//   clearTimeout(timer);
-//   console.log(2, timer);  
-//   timer = setTimeout('countDown()',5000);
-//   console.log(2, timer);
-//   return true;
-// }
-// function load() {
-//   timer = setTimeout('countDown()',5000);
-//   document.body.addEventListener("mousedown", restartTimer, false);
-//   document.body.addEventListener("keypress", restartTimer, false);
-// }
-// document.addEventListener("DOMContentLoaded", load, false);
+function restartTimer() {
+  clearTimeout(timer);
+  $("header h1,.nav-btn,.close").removeClass("fadeOut");
+  timer = setTimeout('countDown()',5000);
+  return true;
+}
 
+function load() {
+  timer = setTimeout('countDown()',5000);
+  document.body.addEventListener("mousedown", restartTimer, false);
+  document.body.addEventListener("keypress", restartTimer, false);
+  document.addEventListener("scroll", restartTimer, false);
 
+}
+document.addEventListener("DOMContentLoaded", load, false);
 
 $(function(){
   // メニューボタン

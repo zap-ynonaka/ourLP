@@ -116,3 +116,17 @@ nav {
   }
 }
 
+.fadeOut{
+  animation-duration: 3s;
+  animation-name: fadeout;
+  opacity:0;
+}
+
+@keyframes fadeout {
+	from{
+		opacity:1;
+	}
+	to {
+		opacity:0;
+	}
+}
