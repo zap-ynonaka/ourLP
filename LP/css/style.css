@@ -141,11 +141,21 @@ nav.close ul.main-nav li a { display: none; }
 
 .nav-btn span { position: absolute; top: 0; right: 0px; color: transparent; display: block; width: 40px; height: 40px; }
 
-.nav-btn span:before, .nav-btn span:after { content: ""; display: block; width: 34px; height: 2px; background-color: #000; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; }
+.nav-btn__open span:before, .nav-btn__open span:after { content: ""; display: block; width: 36px; height: 2px; background-color: #000; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; }
 
-.nav-btn span:before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.nav-btn__open span:after { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
 
-.nav-btn span:after { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+.nav-btn__open span:before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.nav-btn__close:before, .nav-btn__close:after { position: absolute; left: 2px; content: ""; width: 80%; border-top: 2px solid #000; }
+
+.nav-btn__close span { position: relative; display: block; width: 90%; height: 2px; top: 45%; margin: auto; background-color: #000; }
+
+.nav-btn__close:before { top: 8px; }
+
+.nav-btn__close:after { bottom: 8px; }
+
+.nav-btn__close:before, .nav-btn__close:after { position: absolute; left: 2px; content: ""; width: 90%; border-top: 2px solid #000; }
 
 .fadeOut { -webkit-animation-duration: 3s; animation-duration: 3s; -webkit-animation-name: fadeout; animation-name: fadeout; opacity: 0; }
 
@@ -154,6 +164,48 @@ nav.close ul.main-nav li a { display: none; }
 
 @keyframes fadeout { from { opacity: 1; }
   to { opacity: 0; } }
+
+.nav-btn__open, .nav-btn__close { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: active2; animation-name: active2; opacity: 1; }
+
+.active { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: active; animation-name: active; opacity: 0; }
+
+@-webkit-keyframes active { from { opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to { opacity: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes active { from { opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to { opacity: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes active2 { from { opacity: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+  to { opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@keyframes active2 { from { opacity: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+  to { opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+.default_open { visibility: hidden; }
+
+.default_close { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: active3; animation-name: active3; opacity: 1; }
+
+@-webkit-keyframes active3 { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(0deg); transform: rotate(0deg); } }
+
+@keyframes active3 { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(0deg); transform: rotate(0deg); } }
 
 .carousel li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; }
 
