@@ -120,18 +120,19 @@ nav {
 
 .nav-btn__close:before, .nav-btn__close:after {
   position: absolute;
-  left: 2px;
+  left: 0;
+  right:0;
   content: "";
-  width: 80%;
+  width: 60%;
   border-top: 2px solid #000;
+  margin:auto;
 }
 
 .nav-btn__close span {
-  position: relative;
-  display: block;
-  width: 90%;
+  width: 60%;
   height: 2px;
-  top: 45%;
+  left: 0;
+  bottom:0;
   margin: auto;
   background-color: #000;
 }
@@ -144,13 +145,31 @@ nav {
   bottom: 8px;
 }
 
-.nav-btn__close:before, .nav-btn__close:after {
-  position: absolute;
-  left: 2px;
-  content: "";
-  width: 90%;
-  border-top: 2px solid #000;
+// .nav-btn__close:before, .nav-btn__close:after {
+//   position: absolute;
+//   left: 0;
+//   content: "";
+//   width: 60%;
+//   border-top: 2px solid #000;
+// }
+
+.slidein{
+  animation-duration: 1s;
+  animation-name: slidein;
 }
+
+@keyframes slidein {
+  from {
+      margin-left: 100%;
+      width: 300%
+  }
+  to {
+      margin-left: 0%;
+      width: 100%;
+  }
+
+}
+
 
 .fadeOut{
   animation-duration: 3s;
@@ -187,7 +206,7 @@ nav {
 	}
 	to {
     opacity:0;
-    transform: rotate(360deg);;
+    transform: rotate(720deg);
 	}
 }
 
@@ -195,7 +214,7 @@ nav {
 @keyframes active2 {
 	from{
     opacity:0;
-    transform: rotate(360deg);
+    transform: rotate(720deg);
 	}
 	to {
     opacity:1;
