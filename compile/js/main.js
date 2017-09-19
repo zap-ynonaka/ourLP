@@ -70,30 +70,30 @@ $(function(){
   });
 });
 
-// $(function(){
-//   $('.pop').click(function(e){
-//     e.preventDefault();
+$(function(){
+  $('.pop').click(function(e){
+    e.preventDefault();
 
-//     var fadeSpeed = 500;
-//     $(".popup_wrapper")
-//     .css({opacity: '0.0'})
-//     .animate({opacity: '1'}, fadeSpeed);
+    var fadeSpeed = 500;
+    $(".popup_wrapper")
+    .css({opacity: '0.0'})
+    .animate({opacity: '1'}, fadeSpeed);
 
-//     var id = $(this).attr('href');
-//     $(id).css("visibility","visible");
-//     $(".popupbg").css("visibility","visible");
-//     $(id).css("z-index","9999");
-//     $(".close, .nav-btn").css("display","none");
+    var id = $(this).attr('href');
+    $(id).css("visibility","visible");
+    $(".popupbg").css("visibility","visible");
+    $(id).css("z-index","9999");
+    $(".close, .nav-btn").css("display","none");
 
 
-//   $(".close_btn").click(function(){
-//     $(".popup_wrapper").css("visibility","hidden");
-//     $(".popupbg").css("visibility","hidden");
-//     $(".popup_wrapper").css("z-index","0");
-//     $(".close, .nav-btn").css("display","block");
-//   })
-//   })
-// });
+  $(".close_btn").click(function(){
+    $(".popup_wrapper").css("visibility","hidden");
+    $(".popupbg").css("visibility","hidden");
+    $(".popup_wrapper").css("z-index","0");
+    $(".close, .nav-btn").css("display","block");
+  })
+  })
+});
 
 // パララックス
 // $(function(){
