@@ -14,29 +14,7 @@ var feed = new Instafeed({
 });
 feed.run();
 
-
-
-// パララックス
-// $(function(){
-//   function timer_func(){
-//     $('.swich').toggleClass('on');
-//   }
-//   var time_limit = 5*1000; //制限時間
-//   var timer_id = setTimeout(timer_func, time_limit);
-
-//   $('body').on('keydown mousedown', function(){
-//     clearTimeout(timer_id);
-//     timer_id = setTimeout(timer_func, time_limit);
-//   });
-//   $('body').on('mousemove'), function() {
-//     if($('.swich').hasClass('on')) {
-//         $('swich').toggleClass('on');
-//     } else {
-//         return
-//     }
-//   }
-// });
-
+//5秒たったら消えるメニューバー
 var timer;
 var fadeSpeed = 500;
 
@@ -61,14 +39,18 @@ function load() {
 }
 document.addEventListener("DOMContentLoaded", load, false);
 
+
+// メニューボタン開閉
 $(function(){
-  // メニューボタン
   $('.nav-btn').on('click', function(){
+    $('.nav-btn__open').removeClass('default_open');
+    $('.nav-btn__close').removeClass('default_close');
     $('nav').toggleClass('close');
+    $('.nav-btn__close,.nav-btn__open').toggleClass('active');
   });
 });
 
-
+//TOPIMGパララックス
 $(function() {
   var top = $('header').offset().top; //初期値を取得
   $(window).scroll(function() {
@@ -77,9 +59,16 @@ $(function() {
   });
 });
 
-
-
-
+// slickここから
+$(function(){
+  $('.slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
+  });
+});
 
 $(function(){
   $('.pop').click(function(e){
@@ -106,14 +95,23 @@ $(function(){
   })
 });
 
+// パララックス
+// $(function(){
+//   function timer_func(){
+//     $('.swich').toggleClass('on');
+//   }
+//   var time_limit = 5*1000; //制限時間
+//   var timer_id = setTimeout(timer_func, time_limit);
 
-// slickここから
- $(function(){
-  $('.slider').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear'
-  });
-});
+//   $('body').on('keydown mousedown', function(){
+//     clearTimeout(timer_id);
+//     timer_id = setTimeout(timer_func, time_limit);
+//   });
+//   $('body').on('mousemove'), function() {
+//     if($('.swich').hasClass('on')) {
+//         $('swich').toggleClass('on');
+//     } else {
+//         return
+//     }
+//   }
+// });
