@@ -5,6 +5,7 @@
   flex-flow: row wrap;
   a.pop {
     width: 50%;
+    position: relative;
   }
 }
 
@@ -23,6 +24,21 @@
     letter-spacing: 2px;
     text-decoration: none;
   }
+}
+
+.pop p {
+  position: absolute;
+  top: 0;
+  left: 8%;
+  color: #FFF;
+  bottom: 0;
+  margin: auto;
+  font-size: 2vw;
+  letter-spacing: 2px;
+  line-height: unset;
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
 .close_btn:hover{
