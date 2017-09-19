@@ -19,13 +19,13 @@ var timer;
 var fadeSpeed = 500;
 
 function countDown() {
-  $("header h1,.nav-btn,.close").addClass("fadeOut");
+  $("header h1,.nav-btn,nav").addClass("fadeOut");
   return true;
 }
 
 function restartTimer() {
   clearTimeout(timer);
-  $("header h1,.nav-btn,.close").removeClass("fadeOut");
+  $("header h1,.nav-btn,nav").removeClass("fadeOut");
   timer = setTimeout('countDown()',5000);
   return true;
 }
@@ -47,6 +47,7 @@ $(function(){
     $('.nav-btn__close').removeClass('default_close');
     $('nav').toggleClass('close');
     $('.nav-btn__close,.nav-btn__open').toggleClass('active');
+    $('.main-nav li').toggleClass('slidein');
   });
 });
 
