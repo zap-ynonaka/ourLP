@@ -10,9 +10,28 @@ var feed = new Instafeed({
     links: true,
     limit: 3, // 取得件数
     resolution:'standard_resolution', // thumbnail (default) - 150x150 | low_resolution - 306x306 | standard_resolution - 612x612
-    template: '<li><a href="{{link}}"><img src={{image}} alt={{caption}}></a></li>' // 画像URL：{{image}} リンク：{{link}} キャプションテキスト{{caption}} いいね数：{{likes}} コメント数：{{comments}}
+    template: '<li class="active"><a href="{{link}}"><div class="insta-logo"></div><img src={{image}} alt={{caption}}></a></li>' // 画像URL：{{image}} リンク：{{link}} キャプションテキスト{{caption}} いいね数：{{likes}} コメント数：{{comments}}
 });
 feed.run();
+
+// insta高さ確認 + ２秒間隔で切り替え
+var insta_count = 1;
+insta_timer();
+
+function insta_timer() {
+  if ( insta_count < 3 ) {
+    $('#instafeed li').removeClass('active');
+    $('#instafeed li:nth-of-type(' + insta_count + ')').addClass('active');
+    insta_count++;
+  } else {
+    $('#instafeed li').removeClass('active');
+    $('#instafeed li:nth-of-type(' + insta_count + ')').addClass('active');
+    insta_count = 1;
+  }
+  setTimeout('insta_timer()', 5000);
+}
+
+
 
 //5秒たったら消えるメニューバー
 var timer;
@@ -116,3 +135,16 @@ $(function(){
 //     }
 //   }
 // });
+
+
+
+// slick高さ調整
+$(function(){
+  const a = Math.ceil($('.popupbg').outerHeight()),
+        b = Math.ceil($('.slick-list.draggable').outerHeight());
+  
+  if ( a < b ){
+    $('.popup_wrapper, .slick-list.draggable').css('height', a * 0.9);
+  }
+});
+

@@ -177,7 +177,7 @@ nav.close ul.main-nav li a { display: none; }
 
 .nav-btn__open, .nav-btn__close { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: active2; animation-name: active2; opacity: 1; }
 
-.active { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: active; animation-name: active; opacity: 0; }
+.nav-btn span.active { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: active; animation-name: active; opacity: 0; }
 
 @-webkit-keyframes active { from { opacity: 1;
     -webkit-transform: rotate(0deg);
@@ -233,7 +233,7 @@ nav.close ul.main-nav li a { display: none; }
 
 .popupbg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.65); visibility: hidden; z-index: 9999; }
 
-.popup_wrapper { position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; z-index: 0; text-align: center; width: 90%; height: 550px; visibility: hidden; }
+.popup_wrapper { position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; z-index: 0; text-align: center; width: 90%; visibility: hidden; }
 
 .close_btn { position: absolute; top: 0; left: 0; right: 0; margin: auto; background: #3e3a39; width: calc(10vmin - 60px); height: calc(10vmin - 60px); }
 
@@ -253,19 +253,37 @@ nav.close ul.main-nav li a { display: none; }
 
 .slick-dots li button:before { font-family: 'slick'; font-size: 6px; line-height: 20px; position: absolute; top: 0; left: 0; width: 20px; height: 20px; content: '•'; text-align: center; color: #a9a9a9; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
+.carousel li a > img { -webkit-filter: blur(4px); filter: blur(4px); }
+
+.carousel li a:hover > img { -webkit-filter: blur(0px); filter: blur(0px); -webkit-animation: blur_open 0.5s; animation: blur_open 0.5s; }
+
+@-webkit-keyframes blur_open { 0% { -webkit-filter: blur(4px); filter: blur(4px); }
+  100% { -webkit-filter: blur(0px); filter: blur(0px); } }
+
+@keyframes blur_open { 0% { -webkit-filter: blur(4px); filter: blur(4px); }
+  100% { -webkit-filter: blur(0px); filter: blur(0px); } }
+
 ul#instafeed { width: 98%; height: 600px; margin: 20px auto; overflow: hidden; }
 
-ul#instafeed li { width: 100%; position: relative; top: -25%; left: 0; }
+ul#instafeed li { width: 100%; position: relative; opacity: 0; }
 
-ul#instafeed a { display: block; position: relative; }
+ul#instafeed li.active { opacity: 1; }
 
-ul#instafeed a:before, ul#instafeed a:after { content: ""; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; opacity: 0; }
+ul#instafeed a { display: block; position: absolute; top: 0; left: 0; width: 100%; }
 
-ul#instafeed a:before { width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.3); }
+ul#instafeed a img { width: 100%; height: 600px; -o-object-fit: cover; object-fit: cover; }
 
-ul#instafeed a:after { width: 200px; height: 100px; background-image: url(../image/Instagram_logo.png); background-repeat: no-repeat; background-size: 200px; background-position: 50% 50%; }
+ul#instafeed a:before, ul#instafeed a:after { content: ""; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: 100; transition: opacity .5s ease-in-out; opacity: 0; will-change: opacity; }
 
-ul#instafeed a:hover:before, ul#instafeed a:hover:after { opacity: 1; transition: 0.5s; }
+ul#instafeed a:before { background-color: #fff; }
+
+ul#instafeed a:after { background-image: url(../image/Instagram_logo.png); background-repeat: no-repeat; background-position: center; }
+
+ul#instafeed a:hover:before { opacity: .3; }
+
+ul#instafeed a:hover:after { opacity: 1; }
+
+ul#instafeed li:nth-of-type(1) { z-index: 10; }
 
 section.sec_04 iframe { width: 100% !important; }
 

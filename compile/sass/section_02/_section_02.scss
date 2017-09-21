@@ -65,7 +65,6 @@
   z-index: 0;
   text-align: center;
   width: 90%;
-  height: 550px;
   visibility:hidden;
 }
 
@@ -145,3 +144,25 @@
 }
 
 // ここまでスライダー//
+
+
+
+
+// スライダー用画像
+
+.carousel li a {
+  > img {
+    filter: blur(4px);
+  }
+  &:hover {
+    > img {
+      filter: blur(0px);
+      animation: blur_open 0.5s;
+    }
+  }
+}
+@keyframes blur_open {
+  0% {filter: blur(4px);}
+  100% {filter: blur(0px);}
+}
+
