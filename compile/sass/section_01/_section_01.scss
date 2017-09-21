@@ -39,7 +39,7 @@ nav {
   top: 0;
   right: 0;
   width: 300px;
-  height: 700px;
+  height: 100%;
   transition: 0.5s;
   background-color: rgba(188, 177, 149, 0.36);
   z-index: 50;
@@ -145,6 +145,26 @@ nav {
   bottom: 8px;
 }
 
+.nav-logo {
+  position: fixed;
+  right: 50px;
+  bottom: 10%;
+  width: 20px;
+  height: 40px;
+}
+
+.fb-logo img {
+  margin-bottom: 20px;
+}
+
+.menu_logo img {
+  width: 20px;
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  margin-top: -90px;
+}
+
 // .nav-btn__close:before, .nav-btn__close:after {
 //   position: absolute;
 //   left: 0;
@@ -156,6 +176,19 @@ nav {
 .slidein{
   animation-duration: 1s;
   animation-name: slidein;
+}
+
+.header-icon {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  width: 3px;
+  height: 55px;
+  border-radius: 4px;
+  background: #FFF;
+  z-index: 9999;
 }
 
 @keyframes slidein {
@@ -240,3 +273,38 @@ nav {
     transform: rotate(0deg);;
 	}
 }
+
+.move_bitTop{
+  animation-duration: 1s;
+  animation-name: move_bitTop;
+}
+
+@keyframes move_bitTop {
+	0%{
+    bottom: 0px;
+	}
+	50% {
+    bottom: 40px;
+  }
+	100% {
+    bottom: 0px;
+	}
+}
+
+.move_bitDown{
+  animation-duration: 1s;
+  animation-name: move_bitDown;
+}
+
+@keyframes move_bitDown {
+	0%{
+    bottom:0px;
+	}
+	50% {
+    bottom:-40px;
+  }
+	100% {
+    bottom:0px;
+	}
+}
+

@@ -125,7 +125,7 @@ header h1 img { width: 33%; }
 
 .header-video.active video { opacity: 0; }
 
-nav { position: fixed; top: 0; right: 0; width: 300px; height: 700px; transition: 0.5s; background-color: rgba(188, 177, 149, 0.36); z-index: 50; }
+nav { position: fixed; top: 0; right: 0; width: 300px; height: 100%; transition: 0.5s; background-color: rgba(188, 177, 149, 0.36); z-index: 50; }
 
 nav ul.main-nav { height: 300px; width: 300px; position: absolute; top: 0; left: 0; bottom: 0; margin: auto; }
 
@@ -155,7 +155,15 @@ nav.close ul.main-nav li a { display: none; }
 
 .nav-btn__close:after { bottom: 8px; }
 
+.nav-logo { position: fixed; right: 50px; bottom: 10%; width: 20px; height: 40px; }
+
+.fb-logo img { margin-bottom: 20px; }
+
+.menu_logo img { width: 20px; position: fixed; top: 50%; right: 50px; margin-top: -90px; }
+
 .slidein { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: slidein; animation-name: slidein; }
+
+.header-icon { content: ""; position: fixed; bottom: 0; right: 0; left: 50%; width: 3px; height: 55px; border-radius: 4px; background: #FFF; z-index: 9999; }
 
 @-webkit-keyframes slidein { from { margin-left: 100%;
     width: 300%; }
@@ -216,6 +224,26 @@ nav.close ul.main-nav li a { display: none; }
 
 @keyframes active3 { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
   to { -webkit-transform: rotate(0deg); transform: rotate(0deg); } }
+
+.move_bitTop { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: move_bitTop; animation-name: move_bitTop; }
+
+@-webkit-keyframes move_bitTop { 0% { bottom: 0px; }
+  50% { bottom: 40px; }
+  100% { bottom: 0px; } }
+
+@keyframes move_bitTop { 0% { bottom: 0px; }
+  50% { bottom: 40px; }
+  100% { bottom: 0px; } }
+
+.move_bitDown { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: move_bitDown; animation-name: move_bitDown; }
+
+@-webkit-keyframes move_bitDown { 0% { bottom: 0px; }
+  50% { bottom: -40px; }
+  100% { bottom: 0px; } }
+
+@keyframes move_bitDown { 0% { bottom: 0px; }
+  50% { bottom: -40px; }
+  100% { bottom: 0px; } }
 
 .carousel li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; }
 
