@@ -163,6 +163,8 @@ nav.close ul.main-nav li a { display: none; }
 
 .slidein { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: slidein; animation-name: slidein; }
 
+.header-icon { content: ""; position: fixed; bottom: 0; right: 0; left: 50%; width: 3px; height: 55px; border-radius: 4px; background: red; z-index: 9999; }
+
 @-webkit-keyframes slidein { from { margin-left: 100%;
     width: 300%; }
   to { margin-left: 0%;
@@ -222,6 +224,26 @@ nav.close ul.main-nav li a { display: none; }
 
 @keyframes active3 { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
   to { -webkit-transform: rotate(0deg); transform: rotate(0deg); } }
+
+.move_bitTop { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: move_bitTop; animation-name: move_bitTop; }
+
+@-webkit-keyframes move_bitTop { 0% { bottom: 0px; }
+  50% { bottom: 20px; }
+  100% { bottom: 0px; } }
+
+@keyframes move_bitTop { 0% { bottom: 0px; }
+  50% { bottom: 20px; }
+  100% { bottom: 0px; } }
+
+.move_bitDown { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: move_bitDown; animation-name: move_bitDown; }
+
+@-webkit-keyframes move_bitDown { 0% { bottom: 0px; }
+  50% { bottom: -20px; }
+  100% { bottom: 0px; } }
+
+@keyframes move_bitDown { 0% { bottom: 0px; }
+  50% { bottom: -20px; }
+  100% { bottom: 0px; } }
 
 .carousel li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; }
 
