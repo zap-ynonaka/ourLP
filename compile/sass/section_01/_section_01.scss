@@ -39,7 +39,7 @@ nav {
   top: 0;
   right: 0;
   width: 300px;
-  height: 700px;
+  height: 100%;
   transition: 0.5s;
   background-color: rgba(188, 177, 149, 0.36);
   z-index: 50;
@@ -143,6 +143,25 @@ nav {
 
 .nav-btn__close:after {
   bottom: 8px;
+}
+
+.nav-logo {
+  position: fixed;
+  right: 50px;
+  bottom: 10%;
+  width: 20px;
+  height: 40px;
+}
+
+.fb-logo img {
+  margin-bottom: 20px;
+}
+
+.menu_logo img {  /* height: 100%; */
+  width: 20px;
+  position: fixed;
+  top: 30%;
+  right: 50px;
 }
 
 // .nav-btn__close:before, .nav-btn__close:after {

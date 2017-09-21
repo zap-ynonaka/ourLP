@@ -125,7 +125,7 @@ header h1 img { width: 33%; }
 
 .header-video.active video { opacity: 0; }
 
-nav { position: fixed; top: 0; right: 0; width: 300px; height: 700px; transition: 0.5s; background-color: rgba(188, 177, 149, 0.36); z-index: 50; }
+nav { position: fixed; top: 0; right: 0; width: 300px; height: 100%; transition: 0.5s; background-color: rgba(188, 177, 149, 0.36); z-index: 50; }
 
 nav ul.main-nav { height: 300px; width: 300px; position: absolute; top: 0; left: 0; bottom: 0; margin: auto; }
 
@@ -154,6 +154,12 @@ nav.close ul.main-nav li a { display: none; }
 .nav-btn__close:before { top: 8px; }
 
 .nav-btn__close:after { bottom: 8px; }
+
+.nav-logo { position: fixed; right: 50px; bottom: 10%; width: 20px; height: 40px; }
+
+.fb-logo img { margin-bottom: 20px; }
+
+.menu_logo img { /* height: 100%; */ width: 20px; position: fixed; top: 30%; right: 50px; }
 
 .slidein { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: slidein; animation-name: slidein; }
 
