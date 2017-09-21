@@ -159,7 +159,7 @@ nav.close ul.main-nav li a { display: none; }
 
 .fb-logo img { margin-bottom: 20px; }
 
-.menu_logo img { /* height: 100%; */ width: 20px; position: fixed; top: 30%; right: 50px; }
+.menu_logo img { width: 20px; position: fixed; top: 50%; right: 50px; margin-top: -90px; }
 
 .slidein { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: slidein; animation-name: slidein; }
 

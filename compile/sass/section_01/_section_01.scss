@@ -157,11 +157,12 @@ nav {
   margin-bottom: 20px;
 }
 
-.menu_logo img {  /* height: 100%; */
+.menu_logo img {
   width: 20px;
   position: fixed;
-  top: 30%;
+  top: 50%;
   right: 50px;
+  margin-top: -90px;
 }
 
 // .nav-btn__close:before, .nav-btn__close:after {
