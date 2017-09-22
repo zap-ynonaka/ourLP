@@ -141,15 +141,13 @@ nav.close ul.main-nav li a { display: none; }
 
 .nav-btn span { position: absolute; top: 0; right: 0px; color: transparent; display: block; width: 40px; height: 40px; }
 
-.nav-btn__open span:before, .nav-btn__open span:after { content: ""; display: block; width: 36px; height: 2px; background-color: #000; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; }
+.nav-btn__open span:before, .nav-btn__open span:after { content: ""; display: block; width: 30px; height: 1px; background-color: #000; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; }
 
 .nav-btn__open span:after { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
 
 .nav-btn__open span:before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
-.nav-btn__close:before, .nav-btn__close:after { position: absolute; left: 0; right: 0; content: ""; width: 60%; border-top: 2px solid #000; margin: auto; }
-
-.nav-btn__close span { width: 60%; height: 2px; left: 0; bottom: 0; margin: auto; background-color: #000; }
+.nav-btn__close:before, .nav-btn__close:after, .nav-btn__close span { content: ""; display: block; position: absolute; width: 32px; height: 1px; background-color: #000; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
 
 .nav-btn__close:before { top: 8px; }
 
