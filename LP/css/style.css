@@ -17,6 +17,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 img { width: 100%; vertical-align: top; }
 
+body { font-family: 'corm_m'; }
+
 .device-pc { display: block; }
 
 .device-sp { display: none; }
@@ -147,21 +149,21 @@ nav.close ul.main-nav li a { display: none; }
 
 .nav-btn__open span:before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
-.nav-btn__close:before, .nav-btn__close:after, .nav-btn__close span { content: ""; display: block; position: absolute; width: 32px; height: 1px; background-color: #000; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
+.nav-btn__close:before, .nav-btn__close:after, .nav-btn__close span { content: ""; display: block; position: absolute; width: 26px; height: 1px; border-top: 1px solid #000; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
 
-.nav-btn__close:before { top: 8px; }
+.nav-btn__close:before { top: 19px; }
 
-.nav-btn__close:after { bottom: 8px; }
+.nav-btn__close:after { bottom: 16px; }
 
 .nav-logo { position: fixed; right: 50px; bottom: 10%; width: 20px; height: 40px; }
 
 .fb-logo img { margin-bottom: 20px; }
 
-.menu_logo img { width: 20px; position: fixed; top: 50%; right: 50px; margin-top: -90px; }
+.menu_logo img { width: 13px; position: fixed; top: 50%; right: 50px; margin-top: -90px; }
 
 .slidein { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: slidein; animation-name: slidein; }
 
-.header-icon { content: ""; position: fixed; bottom: 0; right: 0; left: 50%; width: 3px; height: 55px; border-radius: 4px; background: #FFF; z-index: 9999; }
+.header-icon { content: ""; position: fixed; bottom: 0; right: 0; left: 0; margin: auto; width: 3px; height: 55px; border-radius: 4px; background: #FFF; z-index: 9999; }
 
 @-webkit-keyframes slidein { from { margin-left: 100%;
     width: 300%; }
@@ -185,33 +187,37 @@ nav.close ul.main-nav li a { display: none; }
 
 .nav-btn span.active { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: active; animation-name: active; opacity: 0; }
 
-@-webkit-keyframes active { from { opacity: 1;
+@-webkit-keyframes active { 0% { opacity: 1;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); }
-  to { opacity: 0;
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg); } }
+  10% { opacity: 0; }
+  100% { opacity: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
-@keyframes active { from { opacity: 1;
+@keyframes active { 0% { opacity: 1;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); }
-  to { opacity: 0;
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg); } }
+  10% { opacity: 0; }
+  100% { opacity: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
-@-webkit-keyframes active2 { from { opacity: 0;
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg); }
-  to { opacity: 1;
+@-webkit-keyframes active2 { 0% { opacity: 0;
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); } }
+            transform: rotate(0deg); }
+  10% { opacity: 1; }
+  100% { opacity: 1;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
-@keyframes active2 { from { opacity: 0;
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg); }
-  to { opacity: 1;
+@keyframes active2 { 0% { opacity: 0;
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); } }
+            transform: rotate(0deg); }
+  10% { opacity: 1; }
+  100% { opacity: 1;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 .default_open { visibility: hidden; }
 
@@ -247,13 +253,19 @@ nav.close ul.main-nav li a { display: none; }
 
 .carousel li a.pop { width: 50%; position: relative; }
 
+.carousel li a.pop:before { content: ""; width: 100%; height: 100%; display: block; position: absolute; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.3); z-index: 5; }
+
+.carousel li a.pop:hover:before { background-color: transparent; }
+
+.carousel li a.pop img { z-index: 1; position: relative; }
+
 .sec_02__message { padding: 36px 0; text-align: center; }
 
-.sec_02__message span { font-size: 14px; display: block; margin-bottom: 24px; }
+.sec_02__message span { font-size: 1vw; display: block; margin-bottom: 24px; }
 
-.sec_02__message a { color: #fff; font-family: 'corm_b'; font-size: 2vw; letter-spacing: 2px; text-decoration: none; }
+.sec_02__message a { color: #fff; font-family: 'corm_m'; font-size: 2vw; letter-spacing: 2px; text-decoration: none; }
 
-.pop p { position: absolute; top: 0; left: 8%; color: #FFF; bottom: 0; margin: auto; font-size: 2vw; letter-spacing: 2px; height: 70px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.pop p { font-family: 'corm_m'; position: absolute; top: 0; left: 8%; line-height: 1.2; color: #FFF; bottom: 0; margin: auto; font-size: 1.7vw; letter-spacing: 2px; height: 70px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; z-index: 10; }
 
 .close_btn:hover { cursor: pointer; }
 
@@ -278,16 +290,6 @@ nav.close ul.main-nav li a { display: none; }
 .slick-dots li.slick-active button:before { color: #FFF; }
 
 .slick-dots li button:before { font-family: 'slick'; font-size: 6px; line-height: 20px; position: absolute; top: 0; left: 0; width: 20px; height: 20px; content: '•'; text-align: center; color: #a9a9a9; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
-.carousel li a > img { -webkit-filter: blur(4px); filter: blur(4px); }
-
-.carousel li a:hover > img { -webkit-filter: blur(0px); filter: blur(0px); -webkit-animation: blur_open 0.5s; animation: blur_open 0.5s; }
-
-@-webkit-keyframes blur_open { 0% { -webkit-filter: blur(4px); filter: blur(4px); }
-  100% { -webkit-filter: blur(0px); filter: blur(0px); } }
-
-@keyframes blur_open { 0% { -webkit-filter: blur(4px); filter: blur(4px); }
-  100% { -webkit-filter: blur(0px); filter: blur(0px); } }
 
 ul#instafeed { width: 98%; height: 600px; margin: 20px auto; overflow: hidden; }
 

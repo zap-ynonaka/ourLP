@@ -41,7 +41,6 @@ function countDown() {
   $("header h1,.nav-btn,nav").addClass("fadeOut");
   return true;
 }
-
 function restartTimer() {
   clearTimeout(timer);
   $("header h1,.nav-btn,nav").removeClass("fadeOut");
@@ -59,6 +58,8 @@ function load() {
 document.addEventListener("DOMContentLoaded", load, false);
 
 
+
+
 // メニューボタン開閉
 $(function(){
   $('.nav-btn').on('click', function(){
@@ -69,6 +70,8 @@ $(function(){
     $('.main-nav li').toggleClass('slidein');
   });
 });
+
+
 
 //TOPIMGパララックス
 $(function() {
@@ -106,7 +109,7 @@ $(function() {
 
   });
 
-  });
+});
 
 
 
@@ -152,26 +155,8 @@ $(function(){
   })
 });
 
-// パララックス
-// $(function(){
-//   function timer_func(){
-//     $('.swich').toggleClass('on');
-//   }
-//   var time_limit = 5*1000; //制限時間
-//   var timer_id = setTimeout(timer_func, time_limit);
 
-//   $('body').on('keydown mousedown', function(){
-//     clearTimeout(timer_id);
-//     timer_id = setTimeout(timer_func, time_limit);
-//   });
-//   $('body').on('mousemove'), function() {
-//     if($('.swich').hasClass('on')) {
-//         $('swich').toggleClass('on');
-//     } else {
-//         return
-//     }
-//   }
-// });
+
 
 
 
@@ -183,4 +168,23 @@ $(function(){
   if ( a < b ){
     $('.popup_wrapper, .slick-list.draggable').css('height', a * 0.9);
   }
+});
+
+
+
+
+
+
+// header-icon一定で消える
+$(function(){
+  const height = Math.ceil($('.sec_02').height() / 2),
+        mainTop = $('main').offset().top + height;
+  $(window).on('scroll', function () {
+    var viewTop = $(window).scrollTop();
+    if (height > viewTop) {
+      $('.header-icon').css('opacity', '1');
+    } else {
+      $('.header-icon').css('opacity', '0');
+    }
+  });
 });
