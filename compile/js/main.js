@@ -172,19 +172,3 @@ $(function(){
 
 
 
-
-
-
-// header-icon一定で消える
-$(function(){
-  const height = Math.ceil($('.sec_02').height() / 2),
-        mainTop = $('main').offset().top + height;
-  $(window).on('scroll', function () {
-    var viewTop = $(window).scrollTop();
-    if (height > viewTop) {
-      $('.header-icon').css('opacity', '1');
-    } else {
-      $('.header-icon').css('opacity', '0');
-    }
-  });
-});
