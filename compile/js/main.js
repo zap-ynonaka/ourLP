@@ -90,34 +90,31 @@ $(function() {
     var current_pos = $(this).scrollTop();//スクロールの値を取得
 
     if (current_pos > start_pos) {
-      console.log('move_bitTop');
+      // console.log('move_bitTop');
       $('.header-icon').removeClass('move_bitTop');
       $('.header-icon').removeClass('move_bitDown');
       $('.header-icon').addClass('move_bitTop');
     } else {
-      console.log('move_bitDown');
+      // console.log('move_bitDown');
       $('.header-icon').removeClass('move_bitTop');
       $('.header-icon').removeClass('move_bitDown');
       $('.header-icon').addClass('move_bitDown');
     }
     start_pos = current_pos;
-
-  //   setTimeout(function(){
-  //     $('.header-icon').removeClass('move_bitTop');
-  //     $('.header-icon').removeClass('move_bitDown');
-  // },1000);
-
   });
-
+  
 });
 
-
-
-
-
-
-
-
+//スクロールしたらナビボタン閉まるよ
+$(window).scroll(function(){
+  if($('nav').hasClass('close')){
+//  console.log("閉じているよ！");
+  }else{
+    $('nav').toggleClass('close');
+    $('.nav-btn__close').removeClass('active');
+    $('.nav-btn__open').addClass('active');
+  }
+});
 
 // slickここから
 $(function(){
