@@ -3,18 +3,19 @@
 footer {
   background-color: #bcb195;
   address {text-align: center;}
-  h4 {padding: 16px 0;font-size: 1vw;}
+  h4 {padding: 16px 0 8px;font-size: 0.9vw;}
   span {font-size: 80%;
     &.device-pc{display: inline-block;font-size: 100%;}
   }
+  li:last-child{font-size: 0.9vw;margin-top: 4px;}
 }
 
 .footer-logo {
-  width: 90px;
+  width: 80px;
   margin: 36px auto 24px;
 }
 
 .copy {
-  font-size: 90%;
+  font-size: 70%;
   padding-bottom: 12px;
 }

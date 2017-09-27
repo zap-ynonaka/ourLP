@@ -166,25 +166,46 @@ $(function(){
 
 
 // header-icon一定で消える
-// $(function(){
-//   const height = Math.ceil($('.sec_02').height() / 2),
-//         mainTop = $('main').offset().top + height;
-//   $(window).on('scroll', function () {
-//     var viewTop = $(window).scrollTop();
-//     if (height > viewTop) {
-//       $('.header-icon').css('opacity', '1');
-//     } else {
-//       $('.header-icon').css('opacity', '0');
-//     }
-//   });
-// });
+$(function(){
+  const height = Math.ceil($('.sec_02').height() / 2),
+        mainTop = $('main').offset().top + height;
+  $(window).on('scroll', function () {
+    var viewTop = $(window).scrollTop();
+    if (height > viewTop) {
+      $('.header-icon').css('opacity', '1');
+    } else {
+      $('.header-icon').css('opacity', '0');
+    }
+  });
+});
 
 
-// const observer = new IntersectionObserver((entries) => {
-//   for(const e of entries) {
-//     console.log(e);
-//   }
-// });
- 
-// // 監視したい要素をobserveする。
-// observer.observe(document.querySelector('.sec_02'));
+
+
+// videoタグ横幅縦幅リサイズ
+$(function() {
+  var getHeight = function() {
+    // 縦横のサイズを取得
+    var height = $(window).outerHeight(),
+        width = $(window).outerWidth();
+
+          
+    var videoWidth = height * 1.76388889,
+        videoHeight = width / 1.76388889;
+    var  margin = (videoWidth - width) / 2;
+
+    if (videoHeight < height) {
+      // 横幅のほうが大きくなってしまう場合にだけ反応するようにしています。
+      $("video").css({left: - margin});
+    }
+  };
+
+  // 以下画面の可変にも対応できるように。
+  $(window).on('load', function(){
+    getHeight();
+  });
+
+  $(window).on('resize', function(){
+    getHeight();
+  });
+});

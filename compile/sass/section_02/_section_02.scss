@@ -26,21 +26,23 @@
   padding: 36px 0;
   text-align: center;
   span {
-    font-size: 1vw;
+    font-size: 0.9vw;
     display: block;
     margin-bottom: 24px;
+    line-height: 2;
+    letter-spacing: 1.6px;
   }
   a {
     color: #fff;
     font-family: 'corm_m';
-    font-size: 2vw;
+    font-size: 1.4vw;
     letter-spacing: 2px;
     text-decoration: none;
   }
 }
 
 .pop p {
-  font-family: 'corm_m';
+  font-family: 'corm_r';
   position: absolute;
   top: 0;
   left: 8%;
@@ -48,7 +50,7 @@
   color: #FFF;
   bottom: 0;
   margin: auto;
-  font-size: 1.7vw;
+  font-size: 1.4vw;
   letter-spacing: 2px;
   height: 70px;
   display: flex;

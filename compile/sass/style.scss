@@ -19,6 +19,14 @@ body {font-family: 'corm_m';}
   font-weight: normal;
   font-style: normal;
 }
+@font-face{ 
+  font-family: 'corm_r';
+  src: url('../font/Cormorant-Regular.woff') format('woff'),
+  url('../font/Cormorant-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Slider */
 .slick-loading .slick-list{background: #fff url('../image/ajax-loader.gif') center center no-repeat;}
 /* Icons */
