@@ -20,7 +20,7 @@ header {
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
     height: 100%;
-    img {
+    > img {
       width: 33%;
     }
   }
@@ -33,6 +33,14 @@ header {
   }
 }
 
+a.header_logo {
+  display: block;
+  position: absolute;
+  left: 3%;
+  top: 20px;
+  width: 46px;
+  z-index: 99999;
+}
 
 nav {
   position: fixed;
