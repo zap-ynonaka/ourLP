@@ -169,3 +169,26 @@ $(function(){
 
 
 
+// header-icon一定で消える
+// $(function(){
+//   const height = Math.ceil($('.sec_02').height() / 2),
+//         mainTop = $('main').offset().top + height;
+//   $(window).on('scroll', function () {
+//     var viewTop = $(window).scrollTop();
+//     if (height > viewTop) {
+//       $('.header-icon').css('opacity', '1');
+//     } else {
+//       $('.header-icon').css('opacity', '0');
+//     }
+//   });
+// });
+
+
+const observer = new IntersectionObserver((entries) => {
+  for(const e of entries) {
+    console.log(e);
+  }
+});
+ 
+// 監視したい要素をobserveする。
+observer.observe(document.querySelector('.sec_02'));
