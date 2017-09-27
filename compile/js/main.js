@@ -153,10 +153,6 @@ $(function(){
 });
 
 
-
-
-
-
 // slick高さ調整
 $(function(){
   const a = Math.ceil($('.popupbg').outerHeight()),
@@ -184,11 +180,11 @@ $(function(){
 // });
 
 
-const observer = new IntersectionObserver((entries) => {
-  for(const e of entries) {
-    console.log(e);
-  }
-});
+// const observer = new IntersectionObserver((entries) => {
+//   for(const e of entries) {
+//     console.log(e);
+//   }
+// });
  
-// 監視したい要素をobserveする。
-observer.observe(document.querySelector('.sec_02'));
+// // 監視したい要素をobserveする。
+// observer.observe(document.querySelector('.sec_02'));
