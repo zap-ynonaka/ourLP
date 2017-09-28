@@ -186,17 +186,27 @@ $(function(){
 $(function() {
   var getHeight = function() {
     // 縦横のサイズを取得
-    var height = $(window).outerHeight(),
-        width = $(window).outerWidth();
+    var windowHeight = $(window).outerHeight(),
+        windowWidth = $(window).outerWidth();
 
-          
-    var videoWidth = height * 1.76388889,
-        videoHeight = width / 1.76388889;
-    var  margin = (videoWidth - width) / 2;
+    var videoHeight = Math.floor($('video').height()),
+        videoWidth = Math.floor($('video').width());
 
-    if (videoHeight < height) {
+    var topMargin = 0 - (videoHeight - windowHeight) / 2,
+        leftMargin = 0 - (videoHeight - windowHeight) / 2;
+    console.log(windowHeight,windowWidth,videoHeight,videoWidth,leftMargin,topMargin);
+
+    if (videoWidth > windowWidth) {
       // 横幅のほうが大きくなってしまう場合にだけ反応するようにしています。
-      $("video").css({left: - margin});
+      $('video').css('left', leftMargin);
+    } else {
+      $('video').css('left', 0);
+    }
+    if (videoHeight > windowHeight) {
+      // 横幅のほうが大きくなってしまう場合にだけ反応するようにしています。
+      $('video').css('top', topMargin);
+    } else {
+      $('video').css('top', 0);
     }
   };
 
@@ -209,3 +219,5 @@ $(function() {
     getHeight();
   });
 });
+
+
