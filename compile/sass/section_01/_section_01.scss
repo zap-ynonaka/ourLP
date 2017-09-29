@@ -172,11 +172,12 @@ nav {
 }
 
 .menu_logo img {
-  width: 13px;
+  width: 11px;
   position: fixed;
-  top: 50%;
-  right: 50px;
-  margin-top: -90px;
+  top: 0;
+  bottom: 0;
+  right: 55px;
+  margin: auto;
 }
 
 // .nav-btn__close:before, .nav-btn__close:after {

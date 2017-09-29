@@ -82,10 +82,8 @@ $(function() {
   });
 
   //スクロールするとdivが動くよ
-
   var start_pos = 0;
   // var height = 50;
-
   $(window).scroll(function(){
     var current_pos = $(this).scrollTop();//スクロールの値を取得
 
@@ -159,7 +157,9 @@ $(function(){
         b = Math.ceil($('.slick-list.draggable').outerHeight());
   
   if ( a < b ){
-    $('.popup_wrapper, .slick-list.draggable').css('height', a * 0.9);
+    $('.popup_wrapper, .slick-list.draggable, .slick-track > div').css('height', a * 0.9);
+  } else {
+    $('.popupbg > div').css('top', '24%');
   }
 });
 
@@ -193,17 +193,17 @@ $(function() {
         videoWidth = Math.floor($('video').width());
 
     var topMargin = 0 - (videoHeight - windowHeight) / 2,
-        leftMargin = 0 - (videoHeight - windowHeight) / 2;
-    console.log(windowHeight,windowWidth,videoHeight,videoWidth,leftMargin,topMargin);
+        leftMargin = 0 - (videoWidth - windowWidth) / 2;
+
+    console.log(windowHeight,windowWidth,videoHeight,videoWidth,topMargin,leftMargin);
+
 
     if (videoWidth > windowWidth) {
-      // 横幅のほうが大きくなってしまう場合にだけ反応するようにしています。
       $('video').css('left', leftMargin);
     } else {
       $('video').css('left', 0);
     }
     if (videoHeight > windowHeight) {
-      // 横幅のほうが大きくなってしまう場合にだけ反応するようにしています。
       $('video').css('top', topMargin);
     } else {
       $('video').css('top', 0);

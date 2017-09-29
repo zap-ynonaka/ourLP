@@ -42,9 +42,9 @@
 }
 
 .pop p {
-  font-family: 'corm_r';
+  font-family: 'corm_l';
   position: absolute;
-  top: 0;
+  top: 60%;
   left: 8%;
   line-height: 1.2;
   color: #FFF;
@@ -159,6 +159,18 @@
   color: #a9a9a9;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.slider-caption {
+  position: absolute;
+  bottom: 5%;
+  letter-spacing: 2px;
+  line-height: 2;
+  left: 4%;
+  color: #fff;
+  font-size: 1.2vw;
+  font-weight: normal;
+  text-align: left;
 }
 
 // ここまでスライダー//
